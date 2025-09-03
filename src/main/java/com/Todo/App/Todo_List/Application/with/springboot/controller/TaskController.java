@@ -37,7 +37,7 @@ public class TaskController {
      }
 
      @GetMapping("/toggle/{id}")
-     public  String completetask(int id){
+     public  String completetask(@PathVariable int id){
         taskService.completeTask(id);
         return "redirect:/";
      }

@@ -10,6 +10,11 @@
          font-size:2rem;
           margin-top
         }
+
+        .text-strikethrough{
+        text-decoration:line-through;
+        color:grey;
+        }
     </style>
 </head>
 <body>
@@ -38,7 +43,7 @@
     <th:block th:each="task : ${tasks}">
 
         <div class="mb-3 w-75 mt-5  border rounded-3  border-1 p-2 mx-auto  d-flex justify-content-between" >
-            <span th:text="${task.name}"></span>
+            <span th:classappend="${task.completion} ?'text-strikethrough'" th:text="${task.name}"></span>
 
          <div>
 <!--            <div>-->
